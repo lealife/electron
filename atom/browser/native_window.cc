@@ -423,8 +423,10 @@ void NativeWindow::AppendExtraCommandLineSwitches(
 #endif
 
   // Check if plugins are enabled.
-  if (web_preferences_.Get("plugins", &b) && b)
+  if (web_preferences_.Get("plugins", &b) && b) {
     command_line->AppendSwitch(switches::kEnablePlugins);
+    command_line->AppendSwitch(switches::kEnableNpapi);
+  }
 
   // This set of options are not availabe in WebPreferences, so we have to pass
   // them via command line and enable them in renderer procss.

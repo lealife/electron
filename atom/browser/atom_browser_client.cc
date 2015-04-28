@@ -185,8 +185,10 @@ void AtomBrowserClient::AppendExtraCommandLineSwitches(
       command_line->AppendSwitchASCII(
           switches::kNodeIntegration,
           info.node_integration ? "true" : "false");
-      if (info.plugins)
+      if (info.plugins) {
         command_line->AppendSwitch(switches::kEnablePlugins);
+        command_line->AppendSwitch(switches::kEnableNpapi);
+      }
       if (!info.preload_script.empty())
         command_line->AppendSwitchPath(
             switches::kPreloadScript,
