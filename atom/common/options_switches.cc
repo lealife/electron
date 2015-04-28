@@ -63,6 +63,9 @@ const char kDirectWrite[] = "direct-write";
 // Enable plugins.
 const char kEnablePlugins[] = "enable-plugins";
 
+// Enable NPAPI
+const char kEnableNpapi[] = "enable-npapi";
+
 // Instancd ID of guest WebContents.
 const char kGuestInstanceID[] = "guest-instance-id";
 
