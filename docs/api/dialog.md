@@ -7,7 +7,8 @@ An example of showing a dialog to select multiple files and directories:
 
 ```javascript
 var win = ...;  // window in which to show the dialog
-var dialog = require('dialog');
+var remote = require('remote');
+var dialog = remote.require('dialog');
 console.log(dialog.showOpenDialog({ properties: [ 'openFile', 'openDirectory', 'multiSelections' ]}));
 ```
 
